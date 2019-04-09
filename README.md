@@ -48,7 +48,7 @@ Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 	1. Po udanym dostarczeniu nicku oraz nazwy użytkownika otrzymasz komunikat zwrotny z unikalnym kluczem API.
 1. Stworzenie grupy Telegramowej, w której będzie operować bot
 	1. Utwórz nową grupę na Telegramie.
-	1. [Dodaj do niej stworzonego przez siebie bota](https://imgur.com/a/cJqMVFb)
+	1. [Dodaj do niej stworzonego przez siebie bota](https://imgur.com/a/cJqMVFb).
 	1. Nadaj botowi prawa administratora grupy (aby mógł wysyłać oraz usuwać wiadomości).
 1. Uzyskanie chatID
 	1. Upewnij się, że bot ma prawa administratora grupy
@@ -70,15 +70,16 @@ Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 
 #### Komendy
 Na dzień dzisiejszy bot wspiera następujące komendy.
-Komenda | Opis | Przykład
------------- | ------------- | -------------
-/start | Uruchom skanowanie w poszukiwaniu nowych ofert | -
-/stop | Zatrzymaj skanowanie | -
-/setup city [city*] | Ustaw miasto docelowe | /setup city warszawa
-/setup priceFrom [minimalPrice] | Ustaw dolny filtr cenowy | /setup priceFrom 850
-/setup priceTo [maximalPrice] | Ustaw górny filtr cenowy | /setup priceTo 2200
-/help | Uzyskaj listę dostępnych komend | -
-/say [text] | Komenda pomocnicza. Powiedz coś jako bot | /say Hej to ja bot!
+
+| Komenda | Opis | Przykład |
+| ------------ | ------------- | ------------- |
+/start | Uruchom skanowanie w poszukiwaniu nowych ofert | - |
+| /stop | Zatrzymaj skanowanie | - |
+| /setup city [city*] | Ustaw miasto docelowe | /setup city warszawa |
+| /setup priceFrom [minimalPrice] | Ustaw dolny filtr cenowy | /setup priceFrom 850 |
+| /setup priceTo [maximalPrice] | Ustaw górny filtr cenowy | /setup priceTo 2200 |
+| /help | Uzyskaj listę dostępnych komend | - |
+| /say [text] | Komenda pomocnicza. Powiedz coś jako bot | /say Hej to ja bot! |
 
 
 \* - argument podawany w języku polskim
