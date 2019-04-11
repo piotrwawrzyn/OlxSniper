@@ -11,7 +11,7 @@ OlxSniper jest botem do Telegrama napisanym w Javie w oparciu o oficjalne API [T
 
 Rosnący popyt na wynajem mieszkania sprawił, że znalezienie sobie lokum w większych miastach bywa czasami bardzo trudne. W okresie wakacyjnym oferty już paręnaście sekund po ich wystawieniu są "nieaktualne" czy też "zarezerwowane". Jeżeli więc odpada wynajęcie mieszkania po znajomości to zostaje nam siedzieć na stronie z ofertami wynajmu i odświeżać ją co 10 sekund - stąd pomysł na bota z altertami.
 
-#### Dlaczego bot pobiera oferty akurat z OLX?
+**Dlaczego bot pobiera oferty akurat z OLX?**
 
 OLX jest największą bazą ofert wynajmu mieszkań. Nowe ogłoszenie pojawia się tam co ok. kilka minut (w większych miastach).
 
@@ -19,9 +19,10 @@ OLX jest największą bazą ofert wynajmu mieszkań. Nowe ogłoszenie pojawia si
 
 Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 
-* [OLX SnIpEr Warszawa](https://t.me/mieszkania_warszawa) - powiadomienia o ofertach mieszkań na wynajem w Warszawie (bez filtrów cenowych)
-* [OLX SnIpEr Kraków](https://t.me/mieszkania_krakow) - powiadomienia o ofertach mieszkań na wynajem w Krakowie (bez filtrów cenowych)
-* [OLX SnIpEr Gdańsk](https://t.me/mieszkania_gdansk) - powiadomienia o ofertach mieszkań na wynajem w Gdańsku (bez filtrów cenowych)
+* [OLX SnIpEr Warszawa](https://t.me/mieszkania_warszawa) - powiadomienia o ofertach mieszkań na wynajem w Warszawie
+* [OLX SnIpEr Kraków](https://t.me/mieszkania_krakow) - powiadomienia o ofertach mieszkań na wynajem w Krakowie
+* [OLX SnIpEr Gdańsk](https://t.me/mieszkania_gdansk) - powiadomienia o ofertach mieszkań na wynajem w Gdańsku
+* [OLX SnIpEr Rzeszów](https://t.me/mieszkania_rzeszow) - powiadomienia o ofertach mieszkań na wynajem w Rzeszowie
 
 **Aby dostawać alerty na telefon najlepiej jest pobrać aplikację mobilną Telegram [[Android](https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=pl) / [IOS](https://itunes.apple.com/us/app/telegram-messenger/id686449807?mt=8)] a następnie dołączyć do grupy.**
 
@@ -36,12 +37,13 @@ Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 * Bot działa tylko do póki odpalony jest proces na komputerze (przydałby się zewnętrzny VPS)
 * Wymogiem jest pewne pojęcie o programowaniu w Javie
 
-#### Wymagania wstępne
+### Wymagania wstępne
 
 * Konto Telegram + [aplikacja Telegram](https://telegram.org/) (może być web app, mobile app lub desktop app)
 * Środowisko Java IDE do modyfikacji i kompilacji kodu
+* Maven do pobrania dependencies
 
-#### Tworzenie własnego bota
+### Tworzenie własnego bota
 1. Inicjalizacja bota po stronie Telegram Bot API
 	1. Otwórz czat z [@BotFather](https://telegram.me/BotFather)'em na Telegramie - jest do bot, który służy do inicjowania nowych botów.
 	1. Użyj komendy `/newbot`, [@BotFather](https://telegram.me/BotFather) zapyta wtedy o nick oraz unikalną nazwę użytkownika dla nowego bota.
@@ -50,30 +52,25 @@ Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 	1. Utwórz nową grupę na Telegramie.
 	1. [Dodaj do niej stworzonego przez siebie bota](https://imgur.com/a/cJqMVFb).
 	1. Nadaj botowi prawa administratora grupy (aby mógł wysyłać oraz usuwać wiadomości).
-1. Uzyskanie chatID
-	1. Upewnij się, że bot ma prawa administratora grupy
-	1. Przygotuj następujący link: [api.telegram.org/bot<TWÓJ_API_KEY_TUTAJ>/getUpdates](api.telegram.org/bot<TWÓJ_API_KEY_TUTAJ>/getUpdates) uzupełniając w nim swój API token uzyskany u [@BotFather](https://telegram.me/BotFather)'a. Link powinen wyglądać mniej więcej tak: `https://api.telegram.org/bot722859650:AAE1RE6Uunu_2TinMeRGytXaRnO9EphBOGQ/getUpdates`. 
-	1. Uruchom link w przeglądarce.
-	1. Napisz kilka losowych wiadomości na stworzonej wcześniej grupie.
-	1. Uruchom link ponownie i [znajdź w odpowiedzi chatID](https://imgur.com/a/VqLksyI).
 1. Kompilacja własnego OlxSnipera
 	1. Pobierz repozytorium z githuba.
-	1. Uzupełnij stałe w klasie Main o swój klucz API, unikalny username bota oraz chatID.
+	1. Pobierz wszystkie dependencies przy pomocy Mavena.
+	1. Uzupełnij stałe w klasie Main o swój klucz API oraz unikalny username bota.
 	
         ```Java
         private final static String BOT_TOKEN_SECRET = "api_secret";
         private final static String BOT_USERNAME = "bot_username";
-        private final static String CHAT_ID = "chat_id";
         ```
+		
      1. Skompiluj i uruchom.
-     1. Ustaw bota oraz aktywuj skanowanie przy pomocy komend.
+     1. Ustaw bota i aktywuj skanowanie przy pomocy komend.
 
-#### Komendy
+### Komendy
 Na dzień dzisiejszy bot wspiera następujące komendy.
 
 | Komenda | Opis | Przykład |
 | ------------ | ------------- | ------------- |
-/start | Uruchom skanowanie w poszukiwaniu nowych ofert | - |
+| /start | Uruchom skanowanie w poszukiwaniu nowych ofert | - |
 | /stop | Zatrzymaj skanowanie | - |
 | /setup city [city*] | Ustaw miasto docelowe | /setup city warszawa |
 | /setup priceFrom [minimalPrice] | Ustaw dolny filtr cenowy | /setup priceFrom 850 |
