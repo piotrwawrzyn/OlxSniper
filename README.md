@@ -23,6 +23,7 @@ Te grupy wysyłają powiadomienia o nowych ofertach mieszkań:
 * [OLX SnIpEr Kraków](https://t.me/mieszkania_krakow) - powiadomienia o ofertach mieszkań na wynajem w Krakowie
 * [OLX SnIpEr Gdańsk](https://t.me/mieszkania_gdansk) - powiadomienia o ofertach mieszkań na wynajem w Gdańsku
 * [OLX SnIpEr Rzeszów](https://t.me/mieszkania_rzeszow) - powiadomienia o ofertach mieszkań na wynajem w Rzeszowie
+* [OLX SnIpEr Łódź](https://t.me/mieszkania_lodz) - powiadomienia o ofertach mieszkań na wynajem w Łodzi
 
 **Aby dostawać alerty na telefon najlepiej jest pobrać aplikację mobilną Telegram [[Android](https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=pl) / [IOS](https://itunes.apple.com/us/app/telegram-messenger/id686449807?mt=8)] a następnie dołączyć do grupy.**
 

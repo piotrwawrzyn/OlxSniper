@@ -32,6 +32,9 @@ public class OlxScanningBot extends ScanningBot {
             page = webClient.getPage(this.getScanningUrl(setup));
         } catch (Exception e) {
             e.printStackTrace();
+
+            // Don't continue if there is an error while loading the page
+            return;
         }
 
         // Get all offers
